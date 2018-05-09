@@ -14,7 +14,7 @@ The current folder has all the infrstructure to use Fake right away:
 
 # Using Fake
 Fake can also be used via this script. All that need to be done is to invoke the script with necessary Fake's parameters. For instance: `.\build.ps1 Clean` will invoke the Clean task of `build.fsx`.
-You can can also optionally provide the 'Script' parameter to specify the name of the build script. For instance, the alternative to `.\build.ps1 <Task>` but with a specified script is the following command: `.\build.ps1 -Script "my_test.fsx <Task>"`
+You can can also optionally provide the `Script` parameter to specify the name of the build script. For instance, the alternative to `.\build.ps1 <Task>` but with a specified script is the following command: `.\build.ps1 -Script "my_test.fsx <Task>"`
 
 # Undercover
 From all [the ways](https://fake.build/fake-gettingstarted.html#Create-and-Edit-scripts-with-Intellisense) offered on the official web-site, the [paket](https://fsprojects.github.io/Paket/) approach appealed to me most of all because:
@@ -22,9 +22,9 @@ From all [the ways](https://fake.build/fake-gettingstarted.html#Create-and-Edit-
 2. I also don't want to have a .Net Core locally or make anybody install it
 
 So the script downloads Paket to the current folder and set up all necessary infrastructure to use it:
-1. `paket.exe` can be found under the '.paket' folder
+1. `paket.exe` can be found under the `.paket` folder
 2. `paket.dependencies` and `paket.lock` are created in the current folder
 
 Considering this, you will have to add `.paket` to your `.gitignore` and add `paket.dependencies` and `paket.lock` to your repository
 
-Also if you specify the `-CreatedDraftFsx` parameter then the script also creates a blueprint of a build script with examples of tasks. By providing the 'Script' parameter, you can controll the name of that script.
+Also if you specify the `-CreatedDraftFsx` parameter then the script also creates a blueprint of a build script with examples of tasks. By providing the `Script` parameter, you can controll the name of that script.
