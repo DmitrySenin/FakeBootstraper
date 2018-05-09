@@ -1,6 +1,7 @@
 [CmdletBinding()]
 Param(
     [switch]$CreateDraftFsx = $false,
+    [string]$Script = "build.fsx",
     [string[]]$Arguments
 )
 
@@ -33,7 +34,7 @@ if (![System.IO.File]::Exists($paketDependenciesFile))
 if ($CreateDraftFsx) 
 {
     [System.IO.File]::WriteAllText(
-        "build.fsx",
+        $Script,
 @"
 #r @"packages\\FAKE\\tools\\FakeLib.dll"
 open Fake
@@ -56,5 +57,5 @@ RunTargetOrDefault "Default"
     );
 }
 
-& "packages\FAKE\tools\Fake.exe" build.fsx $Arguments
+& "packages\FAKE\tools\Fake.exe" $Script $Arguments
 exit $LASTEXITCODE
