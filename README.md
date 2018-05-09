@@ -14,7 +14,7 @@ The current folder has all the infrstructure to use Fake right away:
 
 # Using Fake
 Fake can also be used via this script. All that need to be done is to invoke the script with necessary Fake's parameters. For instance: `.\build.ps1 Clean` will invoke the Clean task of `build.fsx`.
-You can can also optionally provide the `Script` parameter to specify the name of the build script. For instance, the alternative to `.\build.ps1 <Task>` but with a specified script is the following command: `.\build.ps1 -Script "my_test.fsx <Task>"`
+You can can also optionally provide the `Script` parameter to specify the name of the build script. For instance, the alternative to `.\build.ps1 <Task> <FakeArguments>` but with a specified script is the following command: `.\build.ps1 -Script my_test.fsx <Task> <FakeArguments>`(or even easier `.\build.ps1 my_test.fsx <Task> <FakeArguments>`)
 
 # Undercover
 From all [the ways](https://fake.build/fake-gettingstarted.html#Create-and-Edit-scripts-with-Intellisense) offered on the official web-site, the [paket](https://fsprojects.github.io/Paket/) approach appealed to me most of all because:

@@ -18,7 +18,7 @@ if (![System.IO.Directory]::Exists($paketOutputDir))
 if (![System.IO.File]::Exists($outputExe))
 {
     $paketDownloadUrl = "https://github.com/fsprojects/Paket/releases/download/" + $paketVersion + "/paket.exe";
-    Invoke-WebRequest $downloadUrl -OutFile $paketExeOutput;
+    Invoke-WebRequest $paketDownloadUrl -OutFile $paketExeOutput;
 }
 
 if (![System.IO.File]::Exists($paketDependenciesFile))
