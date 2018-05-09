@@ -1,5 +1,5 @@
-# FakeBootstraper
-A PowerShell script to comprehensively set up an environment to use Fake
+# What problem does it help to solve?
+This is a PowerShell script to comprehensively set up an environment to use [Fake](https://fake.build/index.html)
 
 # How to use it
 1. Download the script into the folder wher you want to implement your build system
